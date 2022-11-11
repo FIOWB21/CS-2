@@ -1,4 +1,6 @@
-﻿#include <iostream>
+﻿
+//Відсортувати елементи одновимірного масиву (сортування Шелла)
+#include <iostream>
 #include <time.h>
 using namespace std;
 
