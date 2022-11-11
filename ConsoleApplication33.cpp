@@ -1,4 +1,6 @@
-﻿#include <iostream>
+﻿
+//Відсортувати другу половину одновимірного масиву за спаданням (сортування бульбашкою) (
+#include <iostream>
 #include <time.h>
 
 using namespace std;
