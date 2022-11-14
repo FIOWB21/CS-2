@@ -1,0 +1,38 @@
+//Створити новий стек, що містить лише парні числа з першого стека.
+#include <iostream>
+#include <stack>
+
+using namespace std;
+
+int main()
+{
+	stack <int> s, s_one, s_two;
+	int i = 0, j = 0, size = 20;
+	for (int range, i = 0; i < size; i++) 
+	{
+		range = rand() % 61 - 30;
+		s.push(range);
+	}
+	while (!s.empty())
+	{
+		if (s.top() % 2 == 0)
+			s_one.push(s.top());
+		else
+			s_two.push(s.top());
+		s.pop();
+	}
+	cout << "paired numbers:\n";
+	while (!s_one.empty())
+	{
+		cout << s_one.top() << ' ';
+		s_one.pop();
+	}
+	cout << endl << "unpaired numbers:\n";
+	while (!s_two.empty())
+	{
+		cout << s_two.top() << ' ';
+		s_two.pop();
+	}
+	return 0;
+
+}
