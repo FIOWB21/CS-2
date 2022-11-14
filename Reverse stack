@@ -1,0 +1,35 @@
+#include <iostream>
+#include <stack>
+
+using namespace std;
+
+int main()
+{
+	stack <int> s, s2;
+	int size = 20;
+	cout << "Default stack: " << endl;
+	for (int range, i = 0; i < size; i++)
+	{
+		range = rand() % 61 - 30;
+		s.push(range);
+		cout << s.top() << ' ';
+	}
+
+	for (int i = 0; i < size; i++)
+	{
+		if (i % size+1 == 0)
+		{
+			s2.push(s.top());
+			s.pop();
+		}
+	}
+	cout << endl << "Reverse stack: " << endl;
+	while (!s.empty())
+	{
+		cout << s.top() << ' ';
+		s.pop();
+	}
+
+
+	return 0;
+}
