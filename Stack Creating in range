@@ -1,0 +1,18 @@
+// Создание стека в диапазоне случайных числе -30 до 30
+#include <iostream>
+#include <stack>
+#include <time.h>
+
+using namespace std;
+
+int main()
+{
+	stack <int> stk;
+	int size = 200;
+	
+	for (int range, i = 0; i < size; i++) {
+		range = rand() % 61 - 30;    
+		stk.push(range);
+		cout << stk.top() << ' ';
+	}
+}
